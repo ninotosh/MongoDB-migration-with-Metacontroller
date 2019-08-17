@@ -1,0 +1,8 @@
+apiVersion: gengo.com/v1
+kind: MongoMigration
+metadata:
+  name: mongo-migration-9
+  labels:
+    resource: mongomigration
+spec:
+  url: "https://pastebin.com/raw/T7sSTdRs"

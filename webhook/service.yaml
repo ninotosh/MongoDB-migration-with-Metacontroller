@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: migration-service
+spec:
+  selector:
+    pod: webhook
+  ports:
+  - port: 80
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webhook-pod
+  labels:
+    pod: webhook
+spec:
+  containers:
+  - name: webhook-container
+    image: migration-webhook
+    imagePullPolicy: Never
